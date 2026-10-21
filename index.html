@@ -258,7 +258,60 @@
       background: var(--white);
       border-radius: 10px;
     }
+    
+    /* Daily Motivational Quote */
+    .quote-card {
+      position: relative;
+      margin-top: 25px;
+      padding: 30px 35px;
+      background: linear-gradient(135deg, #fdf2f8, #ede9fe, #eff6ff);
+      border-left: 6px solid var(--pink);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
+    .quote-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 32px rgba(236, 72, 153, 0.25);
+    }
+
+    .quote-label {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, var(--purple), var(--pink));
+      color: var(--white);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .quote-mark {
+      font-size: 70px;
+      line-height: 1;
+      height: 45px;
+      margin-top: 10px;
+      background: linear-gradient(90deg, var(--purple), var(--pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .quote-text {
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--dark);
+      max-width: 700px;
+      margin: 0 auto 10px;
+    }
+
+    .quote-author {
+      font-weight: bold;
+      color: var(--purple);
+    }
+    
     /* ========== 5. TASK MANAGEMENT ========== */
     .task-layout {
       display: grid;
@@ -586,6 +639,16 @@
       </div>
 
     </div>
+    
+      <!-- Daily Motivational Quote -->
+      <div class="quote-card">
+        <span class="quote-label">💡 Daily Motivation</span>
+        <div class="quote-mark">&ldquo;</div>
+        <p class="quote-text">
+          Success is the sum of small efforts, repeated day in and day out.
+        </p>
+        <p class="quote-author">— Robert Collier</p>
+      </div>
   </section>
 
   <!-- ===== TASK MANAGEMENT ===== -->
@@ -606,6 +669,7 @@
           <option>Science</option>
           <option>English</option>
           <option>Computer Science</option>
+          <option>Gen AI</option>
         </select>
 
         <label for="due">Due Date</label>
