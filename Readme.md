@@ -38,6 +38,12 @@ Students often find it hard to keep track of their tasks, classes, goals and upc
 - **Upcoming Deadlines**: number of deadlines coming soon
 - **Study Progress**: percentage with a progress bar
 
+
+### 💡 Daily Motivational Quote
+- A study-related motivational quote shown on the dashboard, below the dashboard cards
+- Displayed in a card that matches the existing theme, with gradients, rounded corners and a hover effect
+- The quote is written in the HTML, so it can be changed by editing the quote text and author in `index.html`
+
 ### 📝 Task Management
 - A form layout for adding a new task (task name, subject, due date and priority)
 - A task list with checkboxes
@@ -118,7 +124,7 @@ This project was created as a group project by the following members:
 | Member | Name | Role |
 |--------|------|------|
 | 1 | *[Member 1 Anfal]* | *[e.g. Project Manager]* |
-| 2 | *[Member 2 Name]* | *[e.g. Design and styling]* |
+| 2 |  Eman Ansar | Developer |
 | 3 | *[Member 3 Name]* | *[e.g. Content and testing]* |
 
 ---
@@ -128,8 +134,14 @@ This project was created as a group project by the following members:
 *Each member should write their own name and describe the changes they made to the project below.*
 
 ### Member 1: *[Name]*
-- *[Describe the modification you made]*
-- *[Describe another modification, if any]*
+- I have added a Daily Motivational quote. Displayed in a card that matches the existing theme, with gradients, rounded corners and a hover effect.
+
+### How have i done it?
+I gave a prompt to the claude and explained the feature that i wanted to add.
+### prompt:  
+Add a Daily Motivational Quote section to my existing Smart Study Planner in index.html. Requirements: Display a short study related motivational quote on the dashboard in a beautiful card that matches esisting theme. Do not change any existing features or rewrite the code. Only add the new section and the CSS needed for it. Tell me where i have to change or add the code. Tell me the exact line number where i have to change.
+
+
 
 ### Member 2: *[Name]*
 - *[Describe the modification you made]*
