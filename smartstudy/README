@@ -1,0 +1,246 @@
+# 📚 StudyFlow – Smart Study Planner
+
+Welcome to **StudyFlow**, a simple and colourful Smart Study Planner front page.
+It is designed to help students organise their study life in one place: daily tasks, weekly timetable, study goals and exam reminders.
+
+This project is built mainly with **HTML and CSS**, plus one small **vanilla JavaScript** script for a time-based greeting, so it is easy to read, understand and modify, even for beginners.
+
+---
+
+## 📖 Project Overview
+
+Students often find it hard to keep track of their tasks, classes, goals and upcoming exams. StudyFlow presents all of this information on a single, well-organised webpage.
+
+**Purpose of the project:**
+
+- To design a clean and attractive study planner layout
+- To practise building a complete webpage using HTML and CSS
+- To show how modern design ideas like gradients, rounded cards and hover effects can be created without CSS frameworks
+- To add a small, beginner-friendly JavaScript feature without changing the existing code
+
+> **Note:** This is a front-end design project. The page shows sample data, and the "Add Task" form is visual only. It does not save or add tasks.
+
+---
+
+## 🌿 Branch
+
+| Branch | Owner |
+|--------|-------|
+| `Mahnoor-Ahmer` | Mahnoor Ahmer |
+
+---
+
+## ✨ Features
+
+### 🧭 Header and Navigation
+- Logo and website name (**StudyFlow**)
+- Navigation links to Dashboard, Tasks, Timetable, Goals and Exams
+- The header stays at the top of the page while scrolling (sticky header)
+
+### 👋 Welcome Section
+- A time-based greeting (Good Morning / Afternoon / Evening / Night) with today's date
+- A heading and short description of the planner
+- Two buttons that jump to the Tasks and Timetable sections
+
+### 📊 Dashboard Cards
+- **Today's Tasks**: number of tasks for today
+- **Completed Tasks**: tasks finished this week
+- **Upcoming Deadlines**: number of deadlines coming soon
+- **Study Progress**: percentage with a progress bar
+
+### 📝 Task Management
+- A form layout for adding a new task (task name, subject, due date and priority)
+- A task list with checkboxes
+- Ticking a checkbox crosses out the task (done with CSS only)
+- Coloured priority tags: **High**, **Medium** and **Low**
+
+### 🗓️ Weekly Timetable
+- A Monday to Friday timetable with time slots
+- Each subject has its own colour
+- Rows are highlighted when you hover over them
+- The table can scroll sideways on small screens
+
+### 🎯 Study Goals
+- Three goal cards, each with a progress bar and completion percentage
+
+### ⏰ Exam Reminders
+- Exam cards showing the date, subject, room, time and days left
+
+### 🎨 Design and Interactivity
+- Colourful gradients and rounded cards
+- Hover effects on cards, buttons, links and task items
+- Responsive layout that adjusts for mobile screens
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| **HTML5**  | Structure and content of the page |
+| **CSS3**   | Styling, colours, gradients, layout (Flexbox and Grid), hover effects and responsive design |
+| **JavaScript (vanilla)** | A small script that shows a time-based greeting and today's date |
+
+- ❌ No external CSS frameworks (like Bootstrap or Tailwind)
+- ❌ No JavaScript libraries (like jQuery)
+
+---
+
+## 📁 Project Folder Structure
+
+```
+smart-study-planner/
+│
+├── index.html     # Main webpage (HTML + CSS in <style> + JS in <script>)
+└── README.md      # Project documentation (this file)
+```
+
+All the CSS is inside the `<style>` tag and the greeting script is inside a `<script>` tag in `index.html`, so the whole project works from a single file.
+
+---
+
+## 🚀 How to Run the Project Locally
+
+You don't need to install anything. Just follow these steps:
+
+1. **Download or clone** my branch to your computer.
+
+   If you are using Git:
+```bash
+   git clone -b Mahnoor-Ahmer <your-repository-link>
+```
+
+   Or, if you already have the repository:
+```bash
+   git checkout Mahnoor-Ahmer
+```
+
+2. **Open the project folder.**
+
+3. **Open `index.html`** in any web browser (Chrome, Firefox, Edge, etc.).
+   - Double-click the file, **or**
+   - Right-click it and choose **Open with → your browser**
+
+4. *(Optional)* If you use **VS Code**, you can install the **Live Server** extension, right-click `index.html` and choose **"Open with Live Server"**. The page will refresh automatically every time you save a change.
+
+That's it! 🎉
+
+---
+
+## 👤 Member
+
+| Name | Student ID | Role | Branch |
+|------|------------|------|--------|
+| **Mahnoor Ahmer** | 63430 | Design and Styling | `Mahnoor-Ahmer` |
+
+---
+
+## ✏️ My Contribution and Modifications
+
+**Mahnoor Ahmer (63430)**
+
+I added a time-based greeting** above the main `<h1>` heading in the Welcome section. It shows **Good Morning**, **Good Afternoon**, **Good Evening** or **Good Night** depending on the time of day, along with today's date.
+
+Used a small **vanilla JavaScript** script (no libraries) Matched the existing style: white rounded pill, purple-to-pink gradient text, soft shadow and hover lift like the cards
+Did not change any existing code; I only added new CSS, HTML and JS
+- If JavaScript is turned off, it shows "👋 Welcome back!" so the layout never breaks
+
+**Time ranges:**
+
+| Time | Greeting |
+|------|----------|
+| 5:00 AM – 11:59 AM | 🌅 Good Morning! |
+| 12:00 PM – 4:59 PM | ☀️ Good Afternoon! |
+| 5:00 PM – 8:59 PM | 🌇 Good Evening! |
+| 9:00 PM – 4:59 AM | 🌙 Good Night! |
+
+### 1. CSS (added after `.welcome-text h1 span` in the `<style>` tag)
+
+```css
+/* Time-based greeting (added by Mahnoor) */
+.greeting {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: var(--white);
+  padding: 8px 18px;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.greeting:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(124, 58, 237, 0.2);
+}
+
+.greeting-text {
+  background: linear-gradient(90deg, var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.greeting-date {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  padding-left: 10px;
+  border-left: 2px solid #e2e8f0;
+}
+```
+
+### 2. HTML (added above the `<h1>` inside `.welcome-text`)
+
+```html
+<!-- Time-based greeting (added by Mahnoor) -->
+<div class="greeting">
+  <span id="greeting-icon">👋</span>
+  <span class="greeting-text" id="greeting-text">Welcome back!</span>
+  <span class="greeting-date" id="greeting-date"></span>
+</div>
+```
+
+### 3. JavaScript (added between `</footer>` and `</body>`)
+
+```html
+<!-- Time-based greeting script (added by Mahnoor) -->
+<script>
+  const now = new Date();
+  const hour = now.getHours();
+
+  let greeting, icon;
+
+  if (hour >= 5 && hour < 12) {
+    greeting = "Good Morning!";
+    icon = "🌅";
+  } else if (hour >= 12 && hour < 17) {
+    greeting = "Good Afternoon!";
+    icon = "☀️";
+  } else if (hour >= 17 && hour < 21) {
+    greeting = "Good Evening!";
+    icon = "🌇";
+  } else {
+    greeting = "Good Night!";
+    icon = "🌙";
+  }
+
+  const today = now.toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+
+  document.getElementById("greeting-text").textContent = greeting;
+  document.getElementById("greeting-icon").textContent = icon;
+  document.getElementById("greeting-date").textContent = "📅 " + today;
+</script>
+```
+
+---
+
+⭐ *Thank you for checking out StudyFlow – Plan Smarter, Study Better!*
